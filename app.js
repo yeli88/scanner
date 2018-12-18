@@ -1,5 +1,5 @@
    
-function scan() {
+
   let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
   
   Instascan.Camera.getCameras().then(function (cameras) {
@@ -12,6 +12,7 @@ function scan() {
     console.error(e);
   });
 
+  function scan(){
   let result = scanner.scan();
   document.getElementById("content").innerHTML = result.content;
 };
