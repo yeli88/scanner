@@ -7,22 +7,10 @@
   </head>
   <body>
     <video id="preview"></video>
-    <p id="People"></p>
-    <script type="text/javascript">
-        let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-        scanner.addListener('scan', function (content) {
-          doccument.getElementById("People").innerHTML = content;
-          console.log(content);
-        });
-        Instascan.Camera.getCameras().then(function (cameras) {
-          if (cameras.length > 0) {
-            scanner.start(cameras[1]);
-          } else {
-            console.error('No cameras found.');
-          }
-        }).catch(function (e) {
-          console.error(e);
-        });
-      </script>
+    <button id="scanner--trigger">Take a picture</button>
+    <p id="content"></p>
+    
+    <script type="text/javascript" src="app.js"></script>
+        
   </body>
 </html>
