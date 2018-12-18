@@ -6,9 +6,11 @@
   </head>
   <body>
     <video id="preview"></video>
+    <p id="People"></p>
     <script type="text/javascript">
         let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
         scanner.addListener('scan', function (content) {
+          doccument.getElementById("People").innerHTML = content;
           console.log(content);
         });
         Instascan.Camera.getCameras().then(function (cameras) {
