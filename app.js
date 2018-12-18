@@ -6,9 +6,11 @@
 
     var name = data[4].slice(0, -3);
     var id = data [9].slice(0,-7);
+    var timestamp = new Date();
 
-    document.getElementById("name").innerHTML = name;
-    document.getElementById("id").innerHTML = id;
+    document.getElementById("name").innerHTML = "Name: " + name;
+    document.getElementById("id").innerHTML = "Id: " + id;
+    document.getElementById("timestamp").innerHTML = "Timestamp: " + timestamp;
   });
   
   Instascan.Camera.getCameras().then(function (cameras) {
