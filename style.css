@@ -81,12 +81,12 @@ body, html {
     background-color: black;
     color: white;
     font-size: 32px;
-    border-radius: 30px;
+    border-radius: 60px;
     border: none;
-    padding: 15px 20px;
+    padding: 30px 40px;
     text-align: center;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
     position: fixed;
-    bottom: 300px;
+    bottom: 60px;
     left: calc(50% - 100px);
 }
